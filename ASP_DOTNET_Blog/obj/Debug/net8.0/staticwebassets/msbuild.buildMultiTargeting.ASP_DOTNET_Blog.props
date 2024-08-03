@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/ASP_DOTNET_Blog.props" />
+</Project>
