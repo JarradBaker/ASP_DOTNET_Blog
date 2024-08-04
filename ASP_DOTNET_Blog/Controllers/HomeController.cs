@@ -4,28 +4,45 @@ using ASP_DOTNET_Blog.Models;
 
 namespace ASP_DOTNET_Blog.Controllers;
 
-public class HomeController : Controller
+public class HelloWorldController: Controller
 {
-    private readonly ILogger<HomeController> _logger;
-
-    public HomeController(ILogger<HomeController> logger)
+    // 
+    // GET: /HelloWorld/
+    public string Index()
     {
-        _logger = logger;
+        return "This is my default action";
     }
 
-    public IActionResult Index()
+    // 
+    // GET: /HelloWorld/Welcome/
+    public string Welcome()
     {
-        return View();
-    }
-
-    public IActionResult Privacy()
-    {
-        return View();
-    }
-
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        return "This is the Welcome action method....";
     }
 }
+
+// public class HomeController : Controller
+// {
+//     private readonly ILogger<HomeController> _logger;
+
+//     public HomeController(ILogger<HomeController> logger)
+//     {
+//         _logger = logger;
+//     }
+
+//     public IActionResult Index()
+//     {
+//         return View();
+//     }
+
+//     public IActionResult Privacy()
+//     {
+//         return View();
+//     }
+
+//     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+//     public IActionResult Error()
+//     {
+//         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+//     }
+// }
